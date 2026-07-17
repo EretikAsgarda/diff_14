@@ -16,7 +16,6 @@ public class Main {
         printLeapYearStatus(year);
     }
 
-
     private static void printLeapYearStatus(int year) {
         if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
             System.out.println(year + " год — високосный год");
@@ -65,7 +64,6 @@ public class Main {
             System.out.println("Установите обычную версию приложения для " + osName + " по ссылке.");
         }
     }
-
 
     //---------------------блок 3: доставка карты---------------------
     public static void runTaskDelivery() {
