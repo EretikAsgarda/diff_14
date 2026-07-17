@@ -24,7 +24,6 @@ public class Main {
         }
     }
 
-
     //---------------------блок 2: версия приложения---------------------
     public static void runTaskAppVersion(Scanner scanner) {
         System.out.print("Выберите ОС (0 — iOS, 1 — Android): ");
