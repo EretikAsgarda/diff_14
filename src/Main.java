@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    // ==================== блок 1: високосный год ====================
+    //---------------------блок 1: високосный год---------------------
     public static void runTaskLeapYear(Scanner scanner) {
         System.out.print("Введите год для проверки високосности: ");
         if (!scanner.hasNextInt()) {
