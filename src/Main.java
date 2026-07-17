@@ -65,7 +65,6 @@ public class Main {
         }
     }
 
-
     //---------------------блок 3: доставка карты---------------------
     public static void runTaskDelivery() {
         int deliveryDistance = 95; // как в условии
