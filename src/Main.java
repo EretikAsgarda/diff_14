@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Main {
@@ -11,8 +12,11 @@ public class Main {
         }
     }
 
-    //-------------------- Задача 2: версия приложения --------------------
+    //-------------------- Задача 2: версия приложения (ОБНОВЛЁННАЯ) --------------------
     public static void suggestAppVersion(int osType, int clientDeviceYear) {
+        // Получаем текущий год автоматически
+        int currentYear = LocalDate.now().getYear();
+
         String osName;
         if (osType == 0) {
             osName = "iOS";
@@ -23,10 +27,16 @@ public class Main {
             return;
         }
 
+        // Плоская цепочка условий (без вложенности)
         if (clientDeviceYear < 2015) {
+            // Устройства старше 2015 года — облегчённая версия
             System.out.println("Установите облегченную версию приложения для " + osName + " по ссылке");
-        } else {
+        } else if (clientDeviceYear >= 2015 && clientDeviceYear <= currentYear) {
+            // 2015 год и новее (но не больше текущего) — обычная версия
             System.out.println("Установите обычную версию приложения для " + osName + " по ссылке");
+        } else {
+            // Год больше текущего — некорректный ввод
+            System.out.println("Указан некорректный год выпуска устройства.");
         }
     }
 
@@ -89,8 +99,6 @@ public class Main {
         } else {
             System.out.println("Потребуется дней: " + days);
         }
-
-
 
         scanner.close();
     }
