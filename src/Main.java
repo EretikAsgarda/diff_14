@@ -90,6 +90,8 @@ public class Main {
             System.out.println("Потребуется дней: " + days);
         }
 
+
+
         scanner.close();
     }
 }
